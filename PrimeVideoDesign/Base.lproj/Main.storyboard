@@ -58,8 +58,11 @@
                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tumuButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KpM-dU-Shj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwt-JC-IRN">
                                         <rect key="frame" x="96" y="0.0" width="76.5" height="32.5"/>
@@ -69,8 +72,11 @@
                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="filmlerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gz6-fM-cD6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDs-YZ-c2d">
                                         <rect key="frame" x="200.5" y="0.0" width="100" height="32.5"/>
@@ -80,8 +86,11 @@
                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tvdizileriButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfI-eT-H5j"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -174,26 +183,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="anaRenk"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1c7-nC-qoN">
-                                    <size key="itemSize" width="153" height="180"/>
+                                    <size key="itemSize" width="120" height="180"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="thirdCollectionCell" id="CFM-qb-2Uj" customClass="TopCollectionView_ViewCell" customModule="PrimeVideoDesign" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="153" height="180"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="d5k-ZG-nZP">
-                                            <rect key="frame" x="0.0" y="0.0" width="153" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vox_machine" translatesAutoresizingMaskIntoConstraints="NO" id="HHJ-g3-sc1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="153" height="180"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="180"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="153" height="180"/>
+                                        <size key="customSize" width="120" height="180"/>
                                         <connections>
                                             <outlet property="thirdCellImage" destination="HHJ-g3-sc1" id="vX5-N5-2Co"/>
                                         </connections>
@@ -235,9 +244,12 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="filmlerButton" destination="Lwt-JC-IRN" id="Ypb-9C-r75"/>
                         <outlet property="secondCollectionView" destination="6M6-Lj-dM4" id="sL4-Re-qiB"/>
                         <outlet property="thirdCollectionView" destination="f7k-qb-Aj1" id="8qi-x9-zSg"/>
                         <outlet property="topCollectionView" destination="kXg-hi-Ng1" id="2vR-n8-yCv"/>
+                        <outlet property="tumuButton" destination="h4U-wo-dLt" id="WaC-gr-sPC"/>
+                        <outlet property="tvdizileriButton" destination="sDs-YZ-c2d" id="oer-vo-82h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -258,7 +270,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Pp0-tu-o6Y" kind="relationship" relationship="viewControllers" id="AM7-YT-dBs"/>
-                        <segue destination="AH2-o6-YG7" kind="relationship" relationship="viewControllers" id="4ZD-N4-ucm"/>
+                        <segue destination="4RC-xN-FiZ" kind="relationship" relationship="viewControllers" id="4ZD-N4-ucm"/>
                         <segue destination="oXO-t9-nhl" kind="relationship" relationship="viewControllers" id="q69-ao-lWG"/>
                     </connections>
                 </tabBarController>
@@ -266,7 +278,7 @@
             </objects>
             <point key="canvasLocation" x="52.671755725190835" y="-27.464788732394368"/>
         </scene>
-        <!--İndirilenler-->
+        <!--IndirilenlerVC-->
         <scene sceneID="chb-E3-p59">
             <objects>
                 <viewController id="AH2-o6-YG7" customClass="IndirilenlerVC" customModule="PrimeVideoDesign" customModuleProvider="target" sceneMemberID="viewController">
@@ -288,13 +300,11 @@
                             <constraint firstItem="Qzl-NR-w0t" firstAttribute="centerY" secondItem="kMb-dp-Q31" secondAttribute="centerY" id="veR-MD-fx0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="İndirilenler" image="square.and.arrow.down" catalog="system" id="zwk-8G-9su">
-                        <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="Lnt-Ol-HdI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="661-fe-A2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="187"/>
+            <point key="canvasLocation" x="1869.5652173913045" y="186.83035714285714"/>
         </scene>
         <!--Arama-->
         <scene sceneID="9iQ-Ij-iIS">
@@ -342,6 +352,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IgL-UQ-Hbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959.4202898550725" y="-511.60714285714283"/>
+        </scene>
+        <!--İndirilenler-->
+        <scene sceneID="kgj-Af-iN3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4RC-xN-FiZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="İndirilenler" image="square.and.arrow.down" catalog="system" id="zwk-8G-9su">
+                        <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fsq-Gb-3v5">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AH2-o6-YG7" kind="relationship" relationship="rootViewController" id="PfE-Gb-lle"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slV-6p-QQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959.4202898550725" y="186.83035714285714"/>
         </scene>
     </scenes>
     <resources>
