@@ -245,7 +245,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="filmlerButton" destination="Lwt-JC-IRN" id="Ypb-9C-r75"/>
+                        <outlet property="firstLabel" destination="6fT-rJ-kr7" id="PH2-3f-9sn"/>
                         <outlet property="secondCollectionView" destination="6M6-Lj-dM4" id="sL4-Re-qiB"/>
+                        <outlet property="secondLabel" destination="a17-fV-jtM" id="OTI-ur-d90"/>
                         <outlet property="thirdCollectionView" destination="f7k-qb-Aj1" id="8qi-x9-zSg"/>
                         <outlet property="topCollectionView" destination="kXg-hi-Ng1" id="2vR-n8-yCv"/>
                         <outlet property="tumuButton" destination="h4U-wo-dLt" id="WaC-gr-sPC"/>

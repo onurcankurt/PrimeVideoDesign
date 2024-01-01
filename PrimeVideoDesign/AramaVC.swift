@@ -8,6 +8,9 @@
 import UIKit
 
 class AramaVC: UIViewController {
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

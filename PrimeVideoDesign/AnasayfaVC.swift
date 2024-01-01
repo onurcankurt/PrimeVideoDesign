@@ -17,6 +17,9 @@ class AnasayfaVC: UIViewController {
     @IBOutlet weak var filmlerButton: UIButton!
     @IBOutlet weak var tvdizileriButton: UIButton!
     
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var secondLabel: UILabel!
+    
     
     var posterFilmListesi = [Film]()
     var filmListesi = [Film]()
@@ -99,6 +102,12 @@ class AnasayfaVC: UIViewController {
         secondCollectionView.reloadData()
         thirdCollectionView.reloadData()
         
+        //firstLabel.text = "Prime - Alt yazılı TV dizileri ve filmler"
+        let text = NSMutableAttributedString()
+        text.append(NSAttributedString(string: "Prime ", attributes: [NSAttributedString.Key.foregroundColor: UIColor.yaziRenk1]))
+        text.append(NSAttributedString(string: "- Alt yazılı TV dizileri ve filmler", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]))
+        firstLabel.attributedText = text
+        
     }
     
     @IBAction func filmlerButtonClicked(_ sender: Any) {
@@ -131,6 +140,13 @@ class AnasayfaVC: UIViewController {
         topCollectionView.reloadData()
         secondCollectionView.reloadData()
         thirdCollectionView.reloadData()
+        
+        //firstLabel.text = "Prime - Alt yazılı filmler"
+        
+        let text = NSMutableAttributedString()
+        text.append(NSAttributedString(string: "Prime ", attributes: [NSAttributedString.Key.foregroundColor: UIColor.yaziRenk1]))
+        text.append(NSAttributedString(string: "- Alt yazılı filmler", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]))
+        firstLabel.attributedText = text
     }
     
     @IBAction func tvdizileriButtonClicked(_ sender: Any) {
@@ -162,6 +178,13 @@ class AnasayfaVC: UIViewController {
         topCollectionView.reloadData()
         secondCollectionView.reloadData()
         thirdCollectionView.reloadData()
+        
+        //firstLabel.text = "Prime - Alt yazılı TV dizileri"
+        
+        let text = NSMutableAttributedString()
+        text.append(NSAttributedString(string: "Prime ", attributes: [NSAttributedString.Key.foregroundColor: UIColor.yaziRenk1]))
+        text.append(NSAttributedString(string: "- Alt yazılı TV dizileri", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]))
+        firstLabel.attributedText = text
     }
     
     func filmDoldur(){
@@ -280,6 +303,6 @@ extension AnasayfaVC: UICollectionViewDelegate, UICollectionViewDataSource {
         }else {
             let film = filmListesi[indexPath.row]
             print("Seçilen içerik: \(film.ad)")
-        } 
+        }
     }
 }
